@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
+import pic4 from '../images/pic4.png';
 import {
   Grid,
-  TextField,
   Button,
   Typography,
   makeStyles,
@@ -108,11 +108,41 @@ const Login = (props) => {
   ) : (
     <Paper elevation={3} className={classes.body}>
       <Grid container direction="column" spacing={4} alignItems="center">
-        <Grid item>
-          <Typography variant="h3" component="h2">
-            Login
-          </Typography>
-        </Grid>
+      <img
+        src={pic4}
+        alt="Welcome"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)', // Adjust the transparency here
+        }}
+      />
+      <div
+        style={{
+          //position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+          color: 'black',
+        }}
+      >
+        <Typography variant="h2">Login</Typography>
+      </div>
+        
         <Grid item>
           <EmailInput
             label="Email"

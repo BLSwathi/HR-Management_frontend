@@ -1,4 +1,5 @@
-export const server = "https://pbackend-2lbc.onrender.com";
+export const server = "https://mern-backend-x0au.onrender.com";
+//export const server = "http://localhost:4444";
 
 const apiList = {
   login: `${server}/auth/login`,

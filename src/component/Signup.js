@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import pic5 from '../images/pic5.png';
 import {
   Grid,
   TextField,
@@ -7,7 +8,6 @@ import {
   makeStyles,
   Paper,
   MenuItem,
-  Input,
 } from "@material-ui/core";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
@@ -325,11 +325,44 @@ const Login = (props) => {
   ) : (
     <Paper elevation={3} className={classes.body}>
       <Grid container direction="column" spacing={4} alignItems="center">
-        <Grid item>
-          <Typography variant="h3" component="h2">
-            Signup
-          </Typography>
-        </Grid>
+      <img
+        src={pic5}
+        alt="Welcome"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+        }}
+      />
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)', // Adjust the transparency here
+        }}
+      />
+
+<div
+        style={{
+          //position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+          color: 'black',
+        }}
+      >
+        <Typography variant="h4">Signup</Typography>
+      </div>
+
+        
+        
         <Grid item>
           <TextField
             select
@@ -456,7 +489,7 @@ const Login = (props) => {
                 onChange={(event) => {
                   if (
                     event.target.value.split(" ").filter(function (n) {
-                      return n != "";
+                      return n !== "";
                     }).length <= 250
                   ) {
                     handleInput("bio", event.target.value);

@@ -28,13 +28,14 @@ const Navbar = (props) => {
   const handleClick = (location) => {
     console.log(location);
     history.push(location);
+
   };
 
   return (
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          Job Portal
+          Careers
         </Typography>
         {isAuth() ? (
           userType() === "recruiter" ? (
